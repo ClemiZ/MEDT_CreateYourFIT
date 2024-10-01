@@ -206,29 +206,18 @@ function addToFit(toAdd, idToAdd) {
 }
 
 function finish() {
-    document.getElementById("wrapper").innerHTML = `
+    document.getElementById("fitSelection").innerHTML = `
            
         <div>
-          <h1>Was ist unsere Mission</h1>
+          <h1>Fertig!</h1>
         </div>
-        <div class="front">
-          <p class="leftText">Um den Kleiderkauf so einfach und so klimaeffizient wie möglich zu machen haben wir eine kleine Auswahl
-            an Partnerfirmen dessen Produkte wir vermitteln. So kannst du dir sicher sein, dass das Produkt klimafreundlich
-            produziert wird und gut ausschaut.
-          </p>
-          <img class="margin" src="Placeholder.xyz" alt="Bild vom Shop">
-        </div>
-          <h1>Wer wir sind</h1>      
-        <div class="front">
-        <div id="map"></div>
-          
-          <p class="rightText">Wir sind ein kleines Team aus Leonding, Österreich.
-                              Unsere Teammitglieder haben ein gemeinsames Hobby für Webdevelopment und wir wollen gemeinsam
-                              das Leben unserer Kunden vereinfachen.
-          </p>
-          
-        </div>    
+        
         `
+    document.getElementById("nav").innerHTML = `
+        <input id="startButton" type="button" value="Return" onclick="toStart()">
+        <div>To purchase, please contact us</div>
+`
+
 
 }
 
