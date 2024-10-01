@@ -1,0 +1,159 @@
+
+.return {
+
+    width: 5%;
+}
+
+.margin {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#map {
+    margin-top: 7.5%;
+    width: 100%;
+    height: 500px;
+}
+
+.front {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: 80% 20%;
+}
+
+#frontGrid {
+    display: grid;
+    grid-template-columns: 75% 1fr;
+}
+
+h1 {
+    letter-spacing: 4px;
+    text-align: center;
+    font-size: 48px;
+    font-family: "Lucida Sans Typewriter", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-bottom: #03d5d5 solid 4px;
+    padding-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#startButton {
+    width: 40%;
+    padding: 2%;
+    margin-left: 25%;
+    background: linear-gradient(#afffff, #03d5d5);
+    border: none;
+    font-family: "Lucida Sans Typewriter", sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    font-style: italic;
+}
+
+#InfoButton {
+    width: 30%;
+    padding: 2%;
+    background: linear-gradient(#afffff, #03d5d5);
+    border: none;
+    font-family: "Lucida Sans Typewriter", sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    font-style: italic;
+}
+
+.rightText {
+    border-right: 4px solid #03d5d5;
+    padding-left: 3%;
+    margin-left: 2%;
+    margin-right: 5%;
+    font-family: "Lucida Sans Typewriter", sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.leftText {
+    border-left: 4px solid #03d5d5;
+    margin-top: 0;
+    padding-top: 5%;
+    padding-left: 3%;
+    margin-left: 2%;
+    margin-right: 5%;
+    font-family: "Lucida Sans Typewriter", sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+#fitSelection {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-bottom: 0%;
+    margin: 5%;
+}
+
+#currentFit {
+    display: flex;
+    margin-top: 0;
+    border-left: 4px solid #03d5d5;
+    flex-direction: column-reverse;
+
+}
+.clothingSelected{
+    height: 30%;
+    margin: 3%;
+    width: 30%;
+
+}
+
+
+.box {
+    width: 21%;
+    padding: 1%;
+    margin: 1%;
+}
+
+.boxImages {
+    width: 75%;
+    height: 225px;
+}
+
+.boxText {
+    font-family: "Lucida Sans Typewriter", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+#nav{
+    margin-top: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+#finishItem{
+    margin-top: 10%;
+    padding: 2%;
+    text-align: center;
+    border: #03d5d5 3px solid;
+    border-radius: 4px;
+    width: 50%;
+    height: 70%;
+}
+.navItem{
+    margin: 5%;
+    padding: 2%;
+    text-align: center;
+    border: #03d5d5 3px solid;
+    border-radius: 4px;
+    width: 10%;
+}
