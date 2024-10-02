@@ -1,7 +1,13 @@
 
 .return {
-
     width: 5%;
+    transition: 0.1s all;
+}
+
+.return:hover {
+    transition: all 0.1s;
+    animation: logoAnimation infinite 2s ease;
+    cursor: pointer;
 }
 
 .margin {
@@ -13,6 +19,15 @@
     margin-top: 7.5%;
     width: 100%;
     height: 500px;
+}
+
+.text {
+    padding-left: 3%;
+    margin-left: 2%;
+    margin-right: 5%;
+    font-family: "Lucida Sans Typewriter", sans-serif;
+    font-weight: bold;
+    font-size: 48px;
 }
 
 .front {
@@ -62,6 +77,13 @@ h1 {
     font-style: italic;
 }
 
+#startButton:hover {
+    transition: 0.1s all;
+    scale: 105%;
+    cursor: pointer;
+    background: linear-gradient(#b5ffff, #27ffff);
+}
+
 #InfoButton {
     width: 30%;
     padding: 2%;
@@ -71,6 +93,13 @@ h1 {
     font-weight: bold;
     font-size: 48px;
     font-style: italic;
+}
+
+#InfoButton:hover {
+    transition: 0.1s all;
+    scale: 105%;
+    cursor: pointer;
+    background: linear-gradient(#b5ffff, #27ffff);
 }
 
 .rightText {
@@ -99,7 +128,6 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     width: 90%;
-    margin-bottom: 0%;
     margin: 5%;
 }
 
@@ -110,11 +138,18 @@ h1 {
     flex-direction: column-reverse;
 
 }
-.clothingSelected{
+
+.clothingSelected {
     height: 30%;
     margin: 3%;
     width: 30%;
 
+}
+
+.clothingSelected:hover {
+    transition: all 0.1s;
+    scale: 150%;
+    cursor: none;
 }
 
 
@@ -127,6 +162,13 @@ h1 {
 .boxImages {
     width: 75%;
     height: 225px;
+    transition: all 0.1s;
+}
+
+.boxImages:hover {
+    transition: all 0.1s;
+    scale: 110%;
+    cursor: pointer;
 }
 
 .boxText {
@@ -134,13 +176,15 @@ h1 {
     font-weight: bold;
     font-style: italic;
 }
-#nav{
+
+#nav {
     margin-top: 0;
     display: flex;
     width: 100%;
     justify-content: space-evenly;
 }
-#finishItem{
+
+#finishItem {
     margin-top: 10%;
     padding: 2%;
     text-align: center;
@@ -148,12 +192,41 @@ h1 {
     border-radius: 4px;
     width: 50%;
     height: 70%;
+    transition: all 0.1s;
 }
-.navItem{
+
+#finishItem:hover {
+    transition: all 0.1s;
+    scale: 110%;
+    cursor: pointer;
+}
+
+.navItem {
     margin: 5%;
     padding: 2%;
     text-align: center;
     border: #03d5d5 3px solid;
     border-radius: 4px;
     width: 10%;
+}
+
+.navItem:hover {
+    transition: 0.1s all;
+    scale: 110%;
+    cursor: pointer;
+}
+
+@keyframes logoAnimation {
+    0%  {
+        scale: 100%;
+    }
+
+    50%{
+        scale: 120%;
+    }
+
+    100%{
+        scale: 100%;
+    }
+
 }

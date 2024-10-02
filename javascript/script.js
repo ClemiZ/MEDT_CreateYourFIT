@@ -1,5 +1,9 @@
 let totalPrice = 0;
 
+let shoeIndex = -1;
+let shirtIndex = -1;
+let trouserIndex = -1;
+
 function createMap() {
     var map = L.map('map').setView([48.268280, 14.252352], 16);
     var marker = L.marker([48.2683, 14.2517]).addTo(map);
@@ -171,7 +175,7 @@ function toDetailed() {
             an Partnerfirmen dessen Produkte wir vermitteln. So kannst du dir sicher sein, dass das Produkt klimafreundlich
             produziert wird und gut ausschaut.
           </p>
-          <img class="margin" src="Placeholder.xyz" alt="Bild vom Shop">
+          <img style="width: 100%" class="margin" src="media/shop.png" alt="Bild vom Shop">
         </div>
           <h1>Wer wir sind</h1>      
         <div class="front">
@@ -195,29 +199,74 @@ function addToFit(toAdd, idToAdd) {
 
 
     if (toAdd === "shoe") {
-        document.getElementById("shoes").innerHTML = `<img style="width: 100%" src="${shoes[idToAdd].image}" alt="Chosen Shoes">`;
+        shoeIndex = idToAdd
+        document.getElementById("shoes").innerHTML = `<img style="width: 100%; height: 100%" src="${shoes[idToAdd].image}" alt="Chosen Shoes">`;
     } else if (toAdd === "shirt") {
-        document.getElementById("shirt").innerHTML = `<img style="width: 100%" src="${shirts[idToAdd].image}" alt="Chosen Shirt">`;
+        shirtIndex = idToAdd
+        document.getElementById("shirt").innerHTML = `<img style="width: 100%; height: 100%" src="${shirts[idToAdd].image}" alt="Chosen Shirt">`;
     } else if (toAdd === "trousers") {
-        document.getElementById("trousers").innerHTML = `<img style="width: 100%" src="${trousers[idToAdd].image}" alt="Chosen Trousers">`;
+        trouserIndex = idToAdd
+        document.getElementById("trousers").innerHTML = `<img style="width: 100%; height: 100%" src="${trousers[idToAdd].image}" alt="Chosen Trousers">`;
     } else {
         console.log("not a valid input: input shoe, shirt or trousers")
     }
 }
 
 function finish() {
-    document.getElementById("fitSelection").innerHTML = `
-           
-        <div>
-          <h1>Fertig!</h1>
+    document.getElementById("header").innerHTML = ` 
+        <img class="return" src="./media/Untitled-2.png" alt="" onclick="toStart()">
+        <h1>Das ist dein Outfit!</h1>
+    `
+    document.getElementById("fitSelection").innerHTML = ""
+    if (shoeIndex !== -1) {
+        document.getElementById("fitSelection").innerHTML += `
+        <div class="box">
+            <img src="${shoes[shoeIndex].image}" class="boxImages" alt="" onclick="addToFit('shoe', 3)">
+          
         </div>
-        
         `
-    document.getElementById("nav").innerHTML = `
-        <input id="startButton" type="button" value="Return" onclick="toStart()">
-        <div>To purchase, please contact us</div>
-`
+        totalPrice += shoes[shoeIndex].price
+    }
+    if (shirtIndex !== -1) {
+        document.getElementById("fitSelection").innerHTML += ` 
+        
+        <div class="box">
+            <img src="${shirts[shirtIndex].image}" class="boxImages" alt="" onclick="addToFit('shoe', 3)">
+            
+        </div>
+        `
+        totalPrice += shirts[shirtIndex].price
+    }
+    if (trouserIndex !== -1) {
+        document.getElementById("fitSelection").innerHTML += `
+        <div class="box">
+            <img src="${trousers[trouserIndex].image}" class="boxImages" alt="" onclick="addToFit('shoe', 3)">
+            
+        </div>
+        `
+        totalPrice += shoes[shoeIndex].price
+    }
+
+    if (trouserIndex === -1 && shirtIndex === -1 && shoeIndex === -1){
+        document.getElementById("nav").innerHTML =
+            `
+            <p class="text">Sie haben kein Produkt ausgewählt</p>
+            
+        `
+    } else{
+        document.getElementById("nav").innerHTML =
+            `
+            <p class="text">Ihr finaler Preis beträgt: ${totalPrice}</p>
+            <p class="text">Bitte kontaktieren Sie uns um den Kauf abzuschließen</p>
+            
+        `
+    }
+
+    document.getElementById("finishItem").innerHTML = `
+        <p class="text" onclick="toStart()">Return</p>
+       `
 
 
 }
+
 
